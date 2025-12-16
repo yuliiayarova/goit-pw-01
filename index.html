@@ -611,7 +611,7 @@
           </address>
         </div>
         <div class="footer-bottom">
-          <nav>
+          <nav class="footer-nav">
             <ul class="footer-menu menu">
               <li class="menu-item">
                 <a class="menu-link footer-menu-link link" href="#home">Home</a>
@@ -628,8 +628,106 @@
               </li>
             </ul>
           </nav>
+          <form class="subscribe-form" name="subscribeForm">
+            <label for="userEmail"></label>
+            <input
+              class="subscribe-input"
+              type="email"
+              name="userEmail"
+              id="userEmail"
+              placeholder="Enter your email"
+            />
+            <button class="btn btn-accent btn-subscribe" type="submit">
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-opened">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">
+          <svg class="btn-close-icon" width="28" height="28">
+            <use href="./images/icons/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <p class="modal-caption">
+          Leave a review about <span class="accent-text">our chocolate</span>
+        </p>
+
+        <form class="modal-reviews-form" name="reviewsForm">
+          <div class="modal-form-wrapper">
+            <label class="modal-form-label" for="userName">Name</label>
+            <div class="modal-form-field">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="userName"
+                id="userName"
+                required
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-wrapper">
+            <label class="modal-form-label" for="userEmail">Email</label>
+            <div class="modal-form-field">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="userEmail"
+                id="userEmail"
+                required
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-wrapper">
+            <label class="modal-form-label" for="userPhone">Phone number</label>
+            <div class="modal-form-field">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="userPhone"
+                id="userPhone"
+                required
+              />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-wrapper">
+            <label class="modal-form-label" for="userComment">Comment</label>
+            <textarea
+              class="modal-form-textarea"
+              name="userComment"
+              id="userComment"
+              placeholder="Enter text"
+              required
+            ></textarea>
+          </div>
+
+          <div class="modal-form-agreement">
+            <input
+              class="agreement-input"
+              type="checkbox"
+              name="userAgreement"
+              id="userAgreement"
+            />
+            <label class="agreement-label" for="userAgreement"
+              >I accept the terms and conditions of the
+              <a class="agreement-link" href="#">Privacy Policy</a></label
+            >
+          </div>
+          <button class="btn btn-accent" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
