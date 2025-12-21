@@ -25,14 +25,15 @@
         <nav class="header-nav">
           <a class="header-logo logo link" href="./index.html"
             ><i>Simply</i> chocolate
-            <img
-              class="logo-icon"
-              src="./images/icons/logo.svg"
-              alt="Logo chocolate"
-              width="24"
-              height="24"
-            />
+            <svg class="logo-icon" width="24" height="24">
+              <use href="./images/icons/logo.svg"></use>
+            </svg>
           </a>
+          <button class="btn-menu" type="button" data-menu-open>
+            <svg class="burger-menu" width="28" height="28">
+              <use href="./images/icons/icons.svg#icon-burger-menu"></use>
+            </svg>
+          </button>
           <ul class="header-menu menu">
             <li class="menu-item">
               <a class="menu-link link" href="#home">Home</a>
@@ -268,7 +269,7 @@
       </section>
 
       <!-- Made-section -->
-      <section class="made section" id="made">
+      <section class="made section hide" id="made">
         <div class="container">
           <h2 class="section-title">
             How it's <span class="accent-text">made</span>?
@@ -491,59 +492,63 @@
           <h2 class="section-title reviews-title">
             <span class="accent-text">Chocolate</span> is loved
           </h2>
-          <ul class="reviews-list">
-            <li class="reviews-item">
-              <img
-                class="reviews-ill"
-                src="./images/reviews/img-1.png"
-                alt="Victoria photo"
-                width="80"
-                height="80"
-              />
-              <h3 class="reviews-author">Victoria Dobrzhanska</h3>
-              <p class="reviews-text">
-                I love this chocolate bar. Perfect combination of light crispy
-                wafer, covered in a thin layer chocolate.
-              </p>
-            </li>
-            <li class="reviews-item">
-              <img
-                class="reviews-ill"
-                src="./images/reviews/img-2.png"
-                alt="Nazar photo"
-                width="80"
-                height="80"
-              />
-              <h3 class="reviews-author">Nazar Babenko</h3>
-              <p class="reviews-text">
-                This chocolate confection is a delight! A delight! The wafer is
-                light and crisp, the hazelnut cream is smooth, and the chocolate
-                is good.
-              </p>
-            </li>
-            <li class="reviews-item">
-              <img
-                class="reviews-ill"
-                src="./images/reviews/img-3.png"
-                alt="Olena photo"
-                width="80"
-                height="80"
-              />
-              <h3 class="reviews-author">Olena Kampusch</h3>
-              <p class="reviews-text">
-                Chocolate is a family favourite treat. Love the delicious smooth
-                chocolate and the creaminess inside. The wafer is soft but
-                crunchy.
-              </p>
-            </li>
-          </ul>
-          <button class="btn btn-dark" type="button">Leave a review</button>
+          <div class="reviews-wrapper">
+            <ul class="reviews-list">
+              <li class="reviews-item">
+                <img
+                  class="reviews-ill"
+                  src="./images/reviews/img-1.png"
+                  alt="Victoria photo"
+                  width="80"
+                  height="80"
+                />
+                <h3 class="reviews-author">Victoria Dobrzhanska</h3>
+                <p class="reviews-text">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </li>
+              <li class="reviews-item">
+                <img
+                  class="reviews-ill"
+                  src="./images/reviews/img-2.png"
+                  alt="Nazar photo"
+                  width="80"
+                  height="80"
+                />
+                <h3 class="reviews-author">Nazar Babenko</h3>
+                <p class="reviews-text">
+                  This chocolate confection is a delight! A delight! The wafer
+                  is light and crisp, the hazelnut cream is smooth, and the
+                  chocolate is good.
+                </p>
+              </li>
+              <li class="reviews-item">
+                <img
+                  class="reviews-ill"
+                  src="./images/reviews/img-3.png"
+                  alt="Olena photo"
+                  width="80"
+                  height="80"
+                />
+                <h3 class="reviews-author">Olena Kampusch</h3>
+                <p class="reviews-text">
+                  Chocolate is a family favourite treat. Love the delicious
+                  smooth chocolate and the creaminess inside. The wafer is soft
+                  but crunchy.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-dark" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -645,10 +650,14 @@
       </div>
     </footer>
 
-    <div class="backdrop is-opened">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-btn-close" type="button">
-          <svg class="btn-close-icon" width="28" height="28">
+        <button class="btn-close" type="button" data-modal-close>
+          <svg
+            class="modal-btn-close-icon btn-close-icon"
+            width="28"
+            height="28"
+          >
             <use href="./images/icons/icons.svg#icon-x-close"></use>
           </svg>
         </button>
@@ -667,8 +676,11 @@
                 id="userName"
                 required
               />
-              <svg class="modal-form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="18" height="18">
                 <use href="./images/icons/icons.svg#icon-user"></use>
+              </svg>
+              <svg class="modal-form-icon icon-error" width="18" height="18">
+                <use href="./images/icons/icons.svg#icon-error"></use>
               </svg>
             </div>
           </div>
@@ -682,8 +694,11 @@
                 id="userEmail"
                 required
               />
-              <svg class="modal-form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="18" height="18">
                 <use href="./images/icons/icons.svg#icon-email"></use>
+              </svg>
+              <svg class="modal-form-icon icon-error" width="18" height="18">
+                <use href="./images/icons/icons.svg#icon-error"></use>
               </svg>
             </div>
           </div>
@@ -697,37 +712,115 @@
                 id="userPhone"
                 required
               />
-              <svg class="modal-form-icon" width="24" height="24">
+              <svg class="modal-form-icon" width="18" height="18">
                 <use href="./images/icons/icons.svg#icon-phone"></use>
+              </svg>
+              <svg class="modal-form-icon icon-error" width="18" height="18">
+                <use href="./images/icons/icons.svg#icon-error"></use>
               </svg>
             </div>
           </div>
           <div class="modal-form-wrapper">
             <label class="modal-form-label" for="userComment">Comment</label>
-            <textarea
-              class="modal-form-textarea"
-              name="userComment"
-              id="userComment"
-              placeholder="Enter text"
-              required
-            ></textarea>
+            <div class="modal-form-field">
+              <textarea
+                class="modal-form-textarea"
+                name="userComment"
+                id="userComment"
+                placeholder="Enter text"
+                required
+                minlength="10"
+              ></textarea>
+              <svg class="modal-form-icon icon-error" width="18" height="18">
+                <use href="./images/icons/icons.svg#icon-error"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="modal-form-agreement">
             <input
-              class="agreement-input"
+              class="agreement-input visually-hidden"
               type="checkbox"
               name="userAgreement"
               id="userAgreement"
+              value="true"
             />
-            <label class="agreement-label" for="userAgreement"
-              >I accept the terms and conditions of the
-              <a class="agreement-link" href="#">Privacy Policy</a></label
+            <label class="agreement-label" for="userAgreement">
+              <span class="custom-checkbox">
+                <svg class="custom-checkbox-icon" width="10" height="10">
+                  <use href="./images/icons/icons.svg#icon-checkmark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="agreement-link" href="#" target="_blank"
+                >Privacy Policy</a
+              ></label
             >
           </div>
           <button class="btn btn-accent" type="submit">Send</button>
         </form>
       </div>
     </div>
+    <div class="mobile-menu" data-menu>
+      <button class="btn-close mobile-btn-close" type="button" data-menu-close>
+        <svg class="btn-close-icon" width="28" height="28">
+          <use href="./images/icons/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link active" href="#home">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#made">How it's made?</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#reviews">Chocolate is loved</a>
+        </li>
+      </ul>
+      <ul class="socials socials-light">
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="http://facebook.com"
+            aria-label="Site facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="http://instagram.com"
+            aria-label="Site instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="http://twitter.com"
+            aria-label="Site twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script type="module" src="./js/form.js"></script>
+    <script type="module" src="./js/mobile-menu.js"></script>
   </body>
 </html>
