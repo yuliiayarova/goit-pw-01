@@ -548,72 +548,74 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer hide">
+    <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
             <span class="accent-text">Chocolate</span> a delicious cure for a
             bad day
           </p>
-          <div class="footer-socials-wrapper">
-            <p class="footer-caption">Social networks</p>
-            <ul class="socials socials-light">
-              <li class="socials-item">
-                <a
-                  class="socials-link link"
-                  href="http://facebook.com"
-                  aria-label="Site facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="socials-icon" width="24" height="24">
-                    <use href="./images/icons/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-item">
-                <a
-                  class="socials-link link"
-                  href="http://instagram.com"
-                  aria-label="Site instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="socials-icon" width="24" height="24">
-                    <use href="./images/icons/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-item">
-                <a
-                  class="socials-link link"
-                  href="http://twitter.com"
-                  aria-label="Site twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="socials-icon" width="24" height="24">
-                    <use href="./images/icons/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="footer-info">
+            <address class="contacts">
+              <p class="footer-caption">Contact us</p>
+              <ul class="contacts-list">
+                <li class="contacts-item">
+                  <a class="contacts-link" href="tel:+380684439426">
+                    +380 (68) 443-94-26
+                  </a>
+                </li>
+                <li class="contacts-item">
+                  <a class="contacts-link" href="mailto:simplychoc@gmail.com">
+                    simplychoc@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+            <div class="footer-socials-wrapper">
+              <p class="footer-caption">Social networks</p>
+              <ul class="socials socials-light">
+                <li class="socials-item">
+                  <a
+                    class="socials-link link"
+                    href="http://facebook.com"
+                    aria-label="Site facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg class="socials-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-item">
+                  <a
+                    class="socials-link link"
+                    href="http://instagram.com"
+                    aria-label="Site instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg class="socials-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-item">
+                  <a
+                    class="socials-link link"
+                    href="http://twitter.com"
+                    aria-label="Site twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg class="socials-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <address class="contacts">
-            <p class="footer-caption">Contact us</p>
-            <ul class="contacts-list">
-              <li class="contacts-item">
-                <a class="contacts-link" href="tel:+380684439426">
-                  +380 (68) 443-94-26
-                </a>
-              </li>
-              <li class="contacts-item">
-                <a class="contacts-link" href="mailto:simplychoc@gmail.com">
-                  simplychoc@gmail.com
-                </a>
-              </li>
-            </ul>
-          </address>
         </div>
         <div class="footer-bottom">
           <nav class="footer-nav">
@@ -634,14 +636,13 @@
             </ul>
           </nav>
           <form class="subscribe-form" name="subscribeForm">
-            <label for="userEmail"></label>
-            <input
-              class="subscribe-input"
-              type="email"
-              name="userEmail"
-              id="userEmail"
-              placeholder="Enter your email"
-            />
+            <label>
+              <input
+                class="subscribe-input"
+                type="email"
+                placeholder="Enter your email"
+              />
+            </label>
             <button class="btn btn-accent btn-subscribe" type="submit">
               Subscribe
             </button>
@@ -662,7 +663,10 @@
           </svg>
         </button>
         <p class="modal-caption">
-          Leave a review about <span class="accent-text">our chocolate</span>
+          Leave a review
+          <span class="modal-caption-break">
+            about <span class="accent-text">our chocolate</span></span
+          >
         </p>
 
         <form class="modal-reviews-form" name="reviewsForm">
@@ -751,11 +755,13 @@
                   <use href="./images/icons/icons.svg#icon-checkmark"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a class="agreement-link" href="#" target="_blank"
-                >Privacy Policy</a
-              ></label
-            >
+              <span>
+                I accept the terms and conditions of the
+                <a class="agreement-link" href="#" target="_blank"
+                  >Privacy Policy</a
+                >
+              </span>
+            </label>
           </div>
           <button class="btn btn-accent" type="submit">Send</button>
         </form>
