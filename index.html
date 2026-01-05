@@ -269,15 +269,38 @@
       </section>
 
       <!-- Made-section -->
-      <section class="made section hide" id="made">
+      <section class="made section" id="made">
         <div class="container">
           <h2 class="section-title">
             How it's <span class="accent-text">made</span>?
           </h2>
           <div class="made-container">
+            <!-- Video -->
+            <div class="made-video-wrapper">
+              <video
+                class="made-video"
+                poster="./images/made/image_mob@1x.jpg"
+                preload="metadata"
+                width="335"
+                height="500"
+              >
+                <source src="./videos/made/video_1.mp4" type="video/mp4" />
+              </video>
+
+              <button class="play-btn" type="button" aria-label="Play video">
+                <svg class="play-icon" width="35" height="35">
+                  <use href="./images/icons/icons.svg#play"></use>
+                </svg>
+              </button>
+            </div>
+
             <img
               class="made-ill"
-              src="./images/made/made-chocolate.jpg"
+              srcset="
+                ./images/made/image_desk@2x.jpg 2x,
+                ./images/made/image_desk@1x.jpg 1x
+              "
+              src="./images/made/image_desk@1x.jpg"
               alt="A plate of hot dark chocolate"
               width="600"
               height="400"
@@ -768,65 +791,72 @@
       </div>
     </div>
     <div class="mobile-menu" data-menu>
-      <button class="btn-close mobile-btn-close" type="button" data-menu-close>
-        <svg class="btn-close-icon" width="28" height="28">
-          <use href="./images/icons/icons.svg#icon-x-close"></use>
-        </svg>
-      </button>
-      <ul class="mobile-menu-list">
-        <li class="mobile-menu-item">
-          <a class="mobile-menu-link active" href="#home">Home</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#made">How it's made?</a>
-        </li>
-        <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#reviews">Chocolate is loved</a>
-        </li>
-      </ul>
-      <ul class="socials socials-light">
-        <li class="socials-item">
-          <a
-            class="socials-link link"
-            href="http://facebook.com"
-            aria-label="Site facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="socials-icon" width="24" height="24">
-              <use href="./images/icons/icons.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials-item">
-          <a
-            class="socials-link link"
-            href="http://instagram.com"
-            aria-label="Site instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="socials-icon" width="24" height="24">
-              <use href="./images/icons/icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials-item">
-          <a
-            class="socials-link link"
-            href="http://twitter.com"
-            aria-label="Site twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="socials-icon" width="24" height="24">
-              <use href="./images/icons/icons.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="container mobile-container">
+        <button
+          class="btn-close mobile-btn-close"
+          type="button"
+          data-menu-close
+        >
+          <svg class="btn-close-icon" width="28" height="28">
+            <use href="./images/icons/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link active" href="#home">Home</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link" href="#made">How it's made?</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link" href="#reviews">Chocolate is loved</a>
+          </li>
+        </ul>
+        <ul class="socials socials-light">
+          <li class="socials-item">
+            <a
+              class="socials-link link"
+              href="http://facebook.com"
+              aria-label="Site facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link link"
+              href="http://instagram.com"
+              aria-label="Site instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link link"
+              href="http://twitter.com"
+              aria-label="Site twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/icons/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <script type="module" src="./js/form.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
+    <script type="module" src="./js/video.js"></script>
   </body>
 </html>
